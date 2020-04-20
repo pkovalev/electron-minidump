@@ -5,6 +5,7 @@ const {minidump} = require('./index')
 const argv = require('yargs')
   .usage('$0 [args]')
   .version(false)
+  .platform('darwin')
   .option('file', {
     alias: 'f',
     describe: 'path to minidump (.dmp) file',
@@ -14,6 +15,11 @@ const argv = require('yargs')
     alias: 'v',
     demandOption: true,
     describe: 'electron version',
+  })
+  .option('platform', {
+    alias: 'p',
+    demandOption: true,
+    describe: 'electron versionlatform',
   })
   .option('quiet', {
     alias: 'q',
