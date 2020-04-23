@@ -5,7 +5,6 @@ const {minidump} = require('./index')
 const argv = require('yargs')
   .usage('$0 [args]')
   .version(false)
-  .platform('darwin')
   .option('file', {
     alias: 'f',
     describe: 'path to minidump (.dmp) file',
